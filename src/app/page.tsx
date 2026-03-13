@@ -5,6 +5,7 @@ import Hero from "@/components/sections/Hero";
 import Intro from "@/components/sections/Intro";
 import Services from "@/components/sections/Services";
 import WhyChoose from "@/components/sections/WhyChoose";
+import ProjectsShowcase from "@/components/sections/ProjectsShowcase";
 import Philosophy from "@/components/sections/Philosophy";
 import Landscaping from "@/components/sections/Landscaping";
 import CTASection from "@/components/sections/CTASection";
@@ -19,6 +20,7 @@ export default function Home() {
         <Intro />
         <Services />
         <WhyChoose />
+        <ProjectsShowcase />
         <Philosophy />
         <Landscaping />
         <CTASection />

@@ -5,14 +5,7 @@ import Link from "next/link";
 import { mainNav } from "@/data/navigation";
 
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -21,75 +14,91 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Main Navigation */}
+      {/* Main Navigation — white bg, no logo, links spread wide */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-sm shadow-sm py-4"
-            : "bg-transparent py-6"
-        }`}
+        className="fixed top-0 left-0 w-full z-50 bg-white"
+        style={{ borderBottom: "1px solid #e8e6e1" }}
       >
-        <div className="container-custom flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="font-display text-xl tracking-wide" style={{ color: scrolled ? "var(--charcoal)" : "#fff" }}>
-            {mainNav.logo}
-          </Link>
-
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+        <div
+          className="flex items-center justify-between"
+          style={{ padding: "0 clamp(24px, 4vw, 64px)", height: "70px" }}
+        >
+          {/* Desktop Nav — links spread evenly, no logo */}
+          <nav className="hidden lg:flex items-center gap-0 flex-1">
             {mainNav.links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium transition-opacity hover:opacity-60"
-                style={{ color: scrolled ? "var(--charcoal)" : "#fff" }}
+                className="flex-1 text-center text-sm transition-opacity hover:opacity-60"
+                style={{
+                  color: "var(--charcoal)",
+                  fontFamily: "var(--font-body)",
+                  fontWeight: 400,
+                  fontSize: "15px",
+                  letterSpacing: "0.3px",
+                  textDecoration: "none",
+                }}
               >
                 {link.label}
-                {link.children && <span className="ml-1 text-xs">&#8964;</span>}
+                {link.children && <span className="ml-1 text-xs opacity-50">&#8964;</span>}
               </Link>
             ))}
           </nav>
 
-          {/* CTA + Hamburger */}
-          <div className="flex items-center gap-4">
-            <Link
-              href={mainNav.cta.href}
-              className="hidden md:inline-flex btn-primary"
-              style={{
-                padding: "10px 24px",
-                fontSize: "13px",
-                background: scrolled ? "var(--sage)" : "rgba(181, 191, 176, 0.85)",
-              }}
-            >
-              {mainNav.cta.label}
-            </Link>
+          {/* Mobile: Brand name (visible only on mobile) */}
+          <Link
+            href="/"
+            className="lg:hidden font-display text-lg tracking-wide"
+            style={{ color: "var(--charcoal)" }}
+          >
+            Hartwood
+          </Link>
 
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden flex flex-col gap-[5px] p-2"
-              aria-label="Toggle menu"
-            >
-              <span
-                className={`block w-6 h-[1.5px] transition-all duration-300 ${
-                  mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""
-                }`}
-                style={{ background: scrolled ? "var(--charcoal)" : "#fff" }}
-              />
-              <span
-                className={`block w-6 h-[1.5px] transition-all duration-300 ${
-                  mobileOpen ? "opacity-0" : ""
-                }`}
-                style={{ background: scrolled ? "var(--charcoal)" : "#fff" }}
-              />
-              <span
-                className={`block w-6 h-[1.5px] transition-all duration-300 ${
-                  mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""
-                }`}
-                style={{ background: scrolled ? "var(--charcoal)" : "#fff" }}
-              />
-            </button>
-          </div>
+          {/* CTA Button — always visible on desktop */}
+          <Link
+            href={mainNav.cta.href}
+            className="hidden lg:inline-flex items-center gap-2 ml-4"
+            style={{
+              padding: "10px 28px",
+              background: "var(--sage)",
+              color: "var(--charcoal)",
+              fontFamily: "var(--font-body)",
+              fontSize: "14px",
+              fontWeight: 400,
+              borderRadius: "50px",
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {mainNav.cta.label}
+          </Link>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden flex flex-col gap-[5px] p-2"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`block w-6 h-[1.5px] transition-all duration-300 ${
+                mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""
+              }`}
+              style={{ background: "var(--charcoal)" }}
+            />
+            <span
+              className={`block w-6 h-[1.5px] transition-all duration-300 ${
+                mobileOpen ? "opacity-0" : ""
+              }`}
+              style={{ background: "var(--charcoal)" }}
+            />
+            <span
+              className={`block w-6 h-[1.5px] transition-all duration-300 ${
+                mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""
+              }`}
+              style={{ background: "var(--charcoal)" }}
+            />
+          </button>
         </div>
       </header>
 
@@ -98,6 +107,7 @@ export default function Navigation() {
         className={`fixed inset-0 z-40 bg-white transition-transform duration-500 ease-in-out lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ paddingTop: "70px" }}
       >
         <div className="flex flex-col justify-center h-full px-8">
           <nav className="space-y-6">
@@ -106,7 +116,8 @@ export default function Navigation() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block font-display text-3xl text-[var(--charcoal)] hover:opacity-60 transition-opacity"
+                className="block font-display text-3xl hover:opacity-60 transition-opacity"
+                style={{ color: "var(--charcoal)" }}
               >
                 {link.label}
               </Link>

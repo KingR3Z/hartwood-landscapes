@@ -1,62 +1,45 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { whyChooseData } from "@/data/homepage";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useReveal } from "@/hooks/useReveal";
 
 export default function WhyChoose() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        sectionRef.current!.querySelectorAll(".why-reveal"),
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.12,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
-        }
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+  const sectionRef = useReveal(".reveal-item", 0.1);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden" style={{ minHeight: "80vh" }}>
-      {/* Background Image */}
+    <section ref={sectionRef} className="relative" style={{ minHeight: "700px" }}>
+      {/* Full-width background image */}
       <Image
         src={whyChooseData.image}
-        alt="Luxury garden"
+        alt="Why choose Hartwood Landscapes"
         fill
         className="object-cover"
         sizes="100vw"
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
-
-      {/* Content Card */}
-      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "80vh" }}>
+      {/* Centered cream card overlay */}
+      <div
+        className="relative z-10 flex items-center justify-center"
+        style={{ minHeight: "700px", padding: "clamp(40px, 6vw, 80px)" }}
+      >
         <div
-          className="max-w-2xl mx-auto p-12 md:p-16"
-          style={{ background: "rgba(255, 255, 255, 0.92)", backdropFilter: "blur(8px)" }}
+          className="reveal-item"
+          style={{
+            background: "rgba(249, 247, 244, 0.93)",
+            maxWidth: "680px",
+            width: "100%",
+            padding: "clamp(40px, 5vw, 70px)",
+          }}
         >
           <h2
-            className="why-reveal font-display mb-8"
+            className="font-display mb-8"
             style={{
-              fontSize: "clamp(28px, 3vw, 42px)",
-              fontWeight: 400,
+              fontSize: "clamp(26px, 3vw, 40px)",
+              fontWeight: 300,
+              fontStyle: "italic",
               color: "var(--charcoal)",
-              lineHeight: 1.2,
-              opacity: 0,
+              lineHeight: 1.3,
             }}
           >
             {whyChooseData.title}
@@ -64,8 +47,8 @@ export default function WhyChoose() {
           {whyChooseData.paragraphs.map((p, i) => (
             <p
               key={i}
-              className="why-reveal mb-5 leading-relaxed"
-              style={{ color: "var(--warm-grey)", fontSize: "14px", opacity: 0 }}
+              className="mb-5 leading-relaxed"
+              style={{ color: "var(--warm-grey)", fontSize: "15px" }}
             >
               {p}
             </p>

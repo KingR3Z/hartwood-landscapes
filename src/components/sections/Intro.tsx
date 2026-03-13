@@ -1,50 +1,27 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import { introData } from "@/data/homepage";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useReveal } from "@/hooks/useReveal";
 
 export default function Intro() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const elements = sectionRef.current!.querySelectorAll(".intro-reveal");
-      gsap.fromTo(
-        elements,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.15,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
-        }
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+  const sectionRef = useReveal(".reveal-item");
 
   return (
     <section ref={sectionRef} style={{ background: "var(--cream)" }} className="section-padding">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text */}
+          {/* Text — left side */}
           <div>
             <h2
-              className="intro-reveal font-display mb-8"
+              className="reveal-item font-display mb-8"
               style={{
-                fontSize: "clamp(28px, 3.5vw, 48px)",
-                fontWeight: 400,
+                fontSize: "clamp(28px, 3vw, 42px)",
+                fontWeight: 300,
+                fontStyle: "italic",
                 color: "var(--charcoal)",
-                lineHeight: 1.2,
-                opacity: 0,
+                lineHeight: 1.3,
               }}
             >
               {introData.heading}
@@ -52,28 +29,52 @@ export default function Intro() {
             {introData.text.map((p, i) => (
               <p
                 key={i}
-                className="intro-reveal mb-5 leading-relaxed"
-                style={{ color: "var(--warm-grey)", fontSize: "15px", opacity: 0 }}
+                className="reveal-item mb-5 leading-relaxed"
+                style={{ color: "var(--warm-grey)", fontSize: "15px" }}
               >
                 {p}
               </p>
             ))}
-            <div className="intro-reveal mt-8" style={{ opacity: 0 }}>
-              <Link href={introData.cta.href} className="btn-primary">
-                {introData.cta.label} <span>→</span>
+            <div className="reveal-item mt-10">
+              <Link
+                href={introData.cta.href}
+                className="inline-flex items-center gap-3"
+                style={{
+                  padding: "12px 28px",
+                  background: "var(--sage)",
+                  color: "var(--charcoal)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "13px",
+                  fontWeight: 500,
+                  letterSpacing: "0.5px",
+                  textTransform: "uppercase" as const,
+                  borderRadius: "50px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                {introData.cta.label}
+                <span style={{ fontSize: "16px" }}>📅</span>
               </Link>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="intro-reveal relative" style={{ opacity: 0 }}>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+          {/* Image — right side, CIRCLE masked */}
+          <div className="reveal-item relative flex justify-center">
+            <div
+              className="relative overflow-hidden"
+              style={{
+                width: "clamp(320px, 30vw, 480px)",
+                height: "clamp(320px, 30vw, 480px)",
+                borderRadius: "50%",
+              }}
+            >
               <Image
                 src={introData.image}
                 alt="Luxury garden design"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 480px"
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         titleRef.current,
-        { opacity: 0, y: 60 },
+        { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.3 }
       );
       gsap.fromTo(
@@ -27,7 +27,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full overflow-hidden" style={{ height: "100vh", minHeight: "600px" }}>
+    <section
+      ref={sectionRef}
+      className="relative w-full overflow-hidden"
+      style={{ height: "calc(100vh - 70px)", marginTop: "70px", minHeight: "500px" }}
+    >
       {/* Background Image */}
       <Image
         src={heroData.image}
@@ -39,19 +43,22 @@ export default function Hero() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/25" />
 
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-center container-custom">
+      {/* Content — bottom-left aligned like reference */}
+      <div
+        className="absolute inset-0 flex flex-col justify-end"
+        style={{ padding: "0 clamp(60px, 6vw, 120px) clamp(60px, 8vh, 120px)" }}
+      >
         <h1
           ref={titleRef}
           className="font-display text-white max-w-3xl"
           style={{
-            fontSize: "clamp(36px, 5vw, 72px)",
-            fontWeight: 400,
+            fontSize: "clamp(36px, 4.5vw, 68px)",
+            fontWeight: 300,
+            fontStyle: "italic",
             lineHeight: 1.15,
             letterSpacing: "-0.5px",
-            opacity: 0,
             whiteSpace: "pre-line",
           }}
         >
@@ -59,19 +66,21 @@ export default function Hero() {
         </h1>
         <p
           ref={subtitleRef}
-          className="mt-6 text-white/70 tracking-[0.25em]"
-          style={{ fontSize: "clamp(11px, 1.2vw, 14px)", fontWeight: 400, opacity: 0 }}
+          className="mt-6 text-white/60 tracking-[0.25em]"
+          style={{ fontSize: "clamp(11px, 1vw, 14px)", fontWeight: 400, textTransform: "uppercase" }}
         >
           {heroData.subtitle}
         </p>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2">
-        <span className="text-white/50 text-xs tracking-widest" style={{ writingMode: "vertical-lr" }}>
-          scroll
-        </span>
-        <div className="w-px h-8 bg-white/30" />
+      {/* Scroll-to-top arrow — bottom right like reference */}
+      <div
+        className="absolute bottom-6 right-6 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+        style={{ background: "rgba(181, 191, 176, 0.6)", backdropFilter: "blur(4px)" }}
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.5">
+          <path d="M7 12V2M2 7l5-5 5 5" />
+        </svg>
       </div>
     </section>
   );

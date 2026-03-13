@@ -1,62 +1,41 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import { landscapingData } from "@/data/homepage";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useReveal } from "@/hooks/useReveal";
 
 export default function Landscaping() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        sectionRef.current!.querySelectorAll(".land-reveal"),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.12,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
-        }
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+  const sectionRef = useReveal(".reveal-item");
 
   return (
-    <section ref={sectionRef} style={{ background: "var(--cream)" }} className="section-padding">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image — left side */}
-          <div className="land-reveal relative order-2 lg:order-1" style={{ opacity: 0 }}>
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={landscapingData.image}
-                alt="Luxury landscaping build"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
+    <section ref={sectionRef} className="bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2" style={{ minHeight: "600px" }}>
+        {/* Image — left side, full height, edge-to-edge */}
+        <div className="reveal-item relative order-2 lg:order-1" style={{ minHeight: "400px" }}>
+          <Image
+            src={landscapingData.image}
+            alt="Luxury landscaping build"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
 
-          {/* Text — right side */}
-          <div className="order-1 lg:order-2">
+        {/* Text — right side with cream bg */}
+        <div
+          className="order-1 lg:order-2 flex items-center"
+          style={{ background: "var(--cream)", padding: "clamp(40px, 5vw, 80px)" }}
+        >
+          <div>
             <h2
-              className="land-reveal font-display mb-8"
+              className="reveal-item font-display mb-8"
               style={{
-                fontSize: "clamp(28px, 3.5vw, 44px)",
-                fontWeight: 400,
+                fontSize: "clamp(26px, 3vw, 38px)",
+                fontWeight: 300,
+                fontStyle: "italic",
                 color: "var(--charcoal)",
-                lineHeight: 1.2,
-                opacity: 0,
+                lineHeight: 1.3,
               }}
             >
               {landscapingData.title}
@@ -64,14 +43,28 @@ export default function Landscaping() {
             {landscapingData.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="land-reveal mb-5 leading-relaxed"
-                style={{ color: "var(--warm-grey)", fontSize: "15px", opacity: 0 }}
+                className="reveal-item mb-5 leading-relaxed"
+                style={{ color: "var(--warm-grey)", fontSize: "15px" }}
               >
                 {p}
               </p>
             ))}
-            <div className="land-reveal mt-8" style={{ opacity: 0 }}>
-              <Link href={landscapingData.cta.href} className="btn-primary">
+            <div className="reveal-item mt-8">
+              <Link
+                href={landscapingData.cta.href}
+                className="inline-flex items-center gap-3"
+                style={{
+                  padding: "12px 28px",
+                  background: "var(--sage)",
+                  color: "var(--charcoal)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  borderRadius: "50px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+              >
                 {landscapingData.cta.label} <span>→</span>
               </Link>
             </div>

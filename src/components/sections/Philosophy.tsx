@@ -1,49 +1,27 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import { philosophyData } from "@/data/homepage";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useReveal } from "@/hooks/useReveal";
 
 export default function Philosophy() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        sectionRef.current!.querySelectorAll(".phil-reveal"),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.12,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
-        }
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+  const sectionRef = useReveal(".reveal-item");
 
   return (
-    <section ref={sectionRef} style={{ background: "var(--forest)" }} className="section-padding">
+    <section ref={sectionRef} className="bg-white section-padding">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text */}
+          {/* Text — left side */}
           <div>
             <h2
-              className="phil-reveal font-display mb-8"
+              className="reveal-item font-display mb-8"
               style={{
-                fontSize: "clamp(28px, 3.5vw, 44px)",
-                fontWeight: 400,
-                color: "var(--cream)",
-                lineHeight: 1.2,
-                opacity: 0,
+                fontSize: "clamp(26px, 3vw, 38px)",
+                fontWeight: 300,
+                fontStyle: "italic",
+                color: "var(--charcoal)",
+                lineHeight: 1.3,
               }}
             >
               {philosophyData.title}
@@ -51,26 +29,36 @@ export default function Philosophy() {
             {philosophyData.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="phil-reveal mb-5 leading-relaxed"
-                style={{ color: "rgba(245, 243, 239, 0.7)", fontSize: "15px", opacity: 0 }}
+                className="reveal-item mb-5 leading-relaxed"
+                style={{ color: "var(--warm-grey)", fontSize: "15px" }}
               >
                 {p}
               </p>
             ))}
-            <div className="phil-reveal mt-8" style={{ opacity: 0 }}>
+            <div className="reveal-item mt-8">
               <Link
                 href={philosophyData.cta.href}
-                className="btn-primary"
-                style={{ background: "var(--sage)", color: "var(--charcoal)" }}
+                className="inline-flex items-center gap-3"
+                style={{
+                  padding: "12px 28px",
+                  background: "var(--sage)",
+                  color: "var(--charcoal)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  borderRadius: "50px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
               >
                 {philosophyData.cta.label} <span>→</span>
               </Link>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="phil-reveal relative" style={{ opacity: 0 }}>
-            <div className="relative aspect-[4/5] overflow-hidden">
+          {/* Image — right side */}
+          <div className="reveal-item relative">
+            <div className="relative aspect-[3/4] overflow-hidden">
               <Image
                 src={philosophyData.image}
                 alt="Garden design philosophy"
