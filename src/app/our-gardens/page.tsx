@@ -29,7 +29,7 @@ export default function OurGardensPage() {
             {projectsShowcase.map((project, i) => (
               <Link
                 key={i}
-                href={`/our-gardens/${project.slug}`}
+                href="/our-gardens"
                 className="reveal-item group block"
               >
                 <div className="relative aspect-[4/3] overflow-hidden mb-4 img-hover-zoom">

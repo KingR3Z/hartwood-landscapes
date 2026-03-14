@@ -61,16 +61,16 @@ export const exploreServices = [
   {
     title: "Landscaping & Garden Build",
     image: "/images/projects/project-03.jpg",
-    href: "/garden-design/landscaping",
+    href: "/garden-design",
   },
   {
     title: "Planting Schemes",
     image: "/images/projects/project-05.jpg",
-    href: "/garden-design/planting-schemes",
+    href: "/garden-design",
   },
   {
     title: "Garden Styling",
     image: "/images/projects/project-04.jpg",
-    href: "/garden-design/garden-styling",
+    href: "/garden-design",
   },
 ];
