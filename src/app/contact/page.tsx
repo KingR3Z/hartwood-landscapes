@@ -460,13 +460,13 @@ export default function ContactPage() {
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>First name <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-0 py-2 text-base focus:outline-none"
+                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "transparent",
+                        background: "rgba(255,255,255,0.92)",
                         border: "none",
-                        borderBottom: "1px solid rgba(255,255,255,0.4)",
-                        color: "#FFFFFF",
-                        borderRadius: 0,
+                        color: "#2C2C2C",
+                        borderRadius: "4px",
+                        height: "48px",
                       }}
                     />
                   </div>
@@ -474,13 +474,13 @@ export default function ContactPage() {
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Last name <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-0 py-2 text-base focus:outline-none"
+                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "transparent",
+                        background: "rgba(255,255,255,0.92)",
                         border: "none",
-                        borderBottom: "1px solid rgba(255,255,255,0.4)",
-                        color: "#FFFFFF",
-                        borderRadius: 0,
+                        color: "#2C2C2C",
+                        borderRadius: "4px",
+                        height: "48px",
                       }}
                     />
                   </div>
@@ -488,22 +488,28 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Phone <span style={{ opacity: 0.6 }}>*</span></label>
-                    <div className="flex" style={{ borderBottom: "1px solid rgba(255,255,255,0.4)" }}>
+                    <div className="flex" style={{ height: "48px" }}>
                       <div
-                        className="flex items-center gap-1 shrink-0 py-2"
-                        style={{ color: "#FFFFFF", fontSize: "14px" }}
+                        className="flex items-center gap-1.5 px-3 shrink-0"
+                        style={{
+                          background: "rgba(255,255,255,0.85)",
+                          borderRight: "1px solid #ddd",
+                          borderRadius: "4px 0 0 4px",
+                          color: "#2C2C2C",
+                          fontSize: "14px",
+                        }}
                       >
                         <span>🇬🇧</span>
-                        <span style={{ fontSize: "10px", opacity: 0.6 }}>&#9662;</span>
+                        <span style={{ fontSize: "10px", color: "#888" }}>&#9662;</span>
                       </div>
                       <input
                         type="tel"
-                        className="w-full px-2 py-2 text-base focus:outline-none"
+                        className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                         style={{
-                          background: "transparent",
+                          background: "rgba(255,255,255,0.92)",
                           border: "none",
-                          color: "#FFFFFF",
-                          borderRadius: 0,
+                          color: "#2C2C2C",
+                          borderRadius: "0 4px 4px 0",
                         }}
                       />
                     </div>
@@ -512,13 +518,13 @@ export default function ContactPage() {
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Postcode <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-0 py-2 text-base focus:outline-none"
+                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "transparent",
+                        background: "rgba(255,255,255,0.92)",
                         border: "none",
-                        borderBottom: "1px solid rgba(255,255,255,0.4)",
-                        color: "#FFFFFF",
-                        borderRadius: 0,
+                        color: "#2C2C2C",
+                        borderRadius: "4px",
+                        height: "48px",
                       }}
                     />
                   </div>
@@ -528,37 +534,37 @@ export default function ContactPage() {
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Email <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="email"
-                      className="w-full px-0 py-2 text-base focus:outline-none"
+                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "transparent",
+                        background: "rgba(255,255,255,0.92)",
                         border: "none",
-                        borderBottom: "1px solid rgba(255,255,255,0.4)",
-                        color: "#FFFFFF",
-                        borderRadius: 0,
+                        color: "#2C2C2C",
+                        borderRadius: "4px",
+                        height: "48px",
                       }}
                     />
                   </div>
                   <div>
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>What service are you looking for?</label>
                     <select
-                      className="w-full px-0 py-2 text-base focus:outline-none appearance-none"
+                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30 appearance-none"
                       style={{
-                        background: "transparent",
+                        background: "rgba(255,255,255,0.92)",
                         border: "none",
-                        borderBottom: "1px solid rgba(255,255,255,0.4)",
-                        color: "#FFFFFF",
-                        borderRadius: 0,
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
+                        color: "#2C2C2C",
+                        borderRadius: "4px",
+                        height: "48px",
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
                         backgroundRepeat: "no-repeat",
-                        backgroundPosition: "right 0 center",
-                        paddingRight: "20px",
+                        backgroundPosition: "right 14px center",
+                        paddingRight: "40px",
                       }}
                     >
-                      <option value="" style={{ color: "#2C2C2C" }}>Select...</option>
-                      <option value="design" style={{ color: "#2C2C2C" }}>Garden Design</option>
-                      <option value="landscaping" style={{ color: "#2C2C2C" }}>Landscaping &amp; Build</option>
-                      <option value="styling" style={{ color: "#2C2C2C" }}>Garden Styling</option>
-                      <option value="planting" style={{ color: "#2C2C2C" }}>Planting Schemes</option>
+                      <option value="">Select...</option>
+                      <option value="design">Garden Design</option>
+                      <option value="landscaping">Landscaping &amp; Build</option>
+                      <option value="styling">Garden Styling</option>
+                      <option value="planting">Planting Schemes</option>
                     </select>
                   </div>
                 </div>
@@ -574,6 +580,7 @@ export default function ContactPage() {
                     borderRadius: "20px",
                     fontFamily: "var(--font-body)",
                     fontWeight: 400,
+                    height: "48px",
                   }}
                 >
                   Submit
