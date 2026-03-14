@@ -47,7 +47,7 @@ export default function CTASection() {
           {/* Right: Form */}
           <div className="reveal-item">
             <p
-              className="font-display mb-8"
+              className="font-display mb-12"
               style={{
                 fontSize: "clamp(20px, 2vw, 26px)",
                 fontWeight: 300,
@@ -58,35 +58,46 @@ export default function CTASection() {
             >
               Arrange an initial garden design consultation and tell us about your project.
             </p>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form style={{ display: "flex", flexDirection: "column", gap: "28px" }} onSubmit={(e) => e.preventDefault()}>
+              {/* Row 1: First name / Last name */}
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
                 <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>First name *</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>First name <span style={{ opacity: 0.6 }}>*</span></label>
+                  <input type="text" className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "6px", height: "56px" }} />
                 </div>
                 <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Last name *</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Phone *</label>
-                  <input type="tel" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
-                </div>
-                <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Postcode *</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Last name <span style={{ opacity: 0.6 }}>*</span></label>
+                  <input type="text" className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "6px", height: "56px" }} />
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              {/* Row 2: Phone / Postcode */}
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
                 <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Email *</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Phone <span style={{ opacity: 0.6 }}>*</span></label>
+                  <div className="flex" style={{ height: "56px" }}>
+                    <div className="flex items-center gap-1.5 px-4 shrink-0" style={{ background: "rgba(255,255,255,0.88)", borderRight: "1px solid #ddd", borderRadius: "6px 0 0 6px", color: "#2C2C2C", fontSize: "14px" }}>
+                      <span>🇬🇧</span>
+                      <span style={{ fontSize: "10px", color: "#888" }}>&#9662;</span>
+                    </div>
+                    <input type="tel" className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "0 6px 6px 0" }} />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>What service are you looking for?</label>
-                  <select className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none appearance-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }}>
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Postcode <span style={{ opacity: 0.6 }}>*</span></label>
+                  <input type="text" className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "6px", height: "56px" }} />
+                </div>
+              </div>
+
+              {/* Row 3: Email / Service */}
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
+                <div>
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Email <span style={{ opacity: 0.6 }}>*</span></label>
+                  <input type="email" className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "6px", height: "56px" }} />
+                </div>
+                <div>
+                  <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>What service are you looking for?</label>
+                  <select className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30 appearance-none" style={{ background: "rgba(255,255,255,0.95)", border: "none", color: "#2C2C2C", borderRadius: "6px", height: "56px", backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center", paddingRight: "44px" }}>
                     <option value="">Select...</option>
                     <option value="design">Garden Design</option>
                     <option value="landscaping">Landscaping &amp; Build</option>
@@ -95,13 +106,17 @@ export default function CTASection() {
                   </select>
                 </div>
               </div>
-              <button
-                type="submit"
-                className="w-full py-4 mt-4 text-sm font-medium tracking-wide rounded-sm transition-all duration-300"
-                style={{ background: "rgba(255,255,255,0.9)", color: "var(--charcoal)", border: "none", cursor: "pointer", fontSize: "14px" }}
-              >
-                Submit
-              </button>
+
+              {/* Submit */}
+              <div style={{ marginTop: "20px" }}>
+                <button
+                  type="submit"
+                  className="w-full text-sm tracking-wide transition-all duration-300 hover:opacity-90"
+                  style={{ background: "#D9DDD6", color: "#000000", border: "none", cursor: "pointer", fontSize: "14px", borderRadius: "28px", fontFamily: "var(--font-body)", fontWeight: 400, height: "56px" }}
+                >
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
         </div>
