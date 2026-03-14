@@ -453,7 +453,7 @@ export default function ContactPage() {
           >
             <div className="w-full">
               <p
-                className="form-reveal reveal-item mb-8"
+                className="form-reveal reveal-item mb-12"
                 style={{
                   fontSize: "clamp(18px, 1.5vw, 22px)",
                   fontWeight: 400,
@@ -464,47 +464,50 @@ export default function ContactPage() {
               >
                 Arrange an initial garden design consultation and tell us about your project.
               </p>
-              <form className="form-reveal reveal-item space-y-7" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form className="form-reveal reveal-item" style={{ display: "flex", flexDirection: "column", gap: "28px" }} onSubmit={(e) => e.preventDefault()}>
+                {/* Row 1: First name / Last name */}
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>First name <span style={{ opacity: 0.6 }}>*</span></label>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>First name <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255,255,255,0.95)",
                         border: "none",
                         color: "#2C2C2C",
-                        borderRadius: "4px",
-                        height: "48px",
+                        borderRadius: "6px",
+                        height: "56px",
                       }}
                     />
                   </div>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Last name <span style={{ opacity: 0.6 }}>*</span></label>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Last name <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255,255,255,0.95)",
                         border: "none",
                         color: "#2C2C2C",
-                        borderRadius: "4px",
-                        height: "48px",
+                        borderRadius: "6px",
+                        height: "56px",
                       }}
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                {/* Row 2: Phone / Postcode */}
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Phone <span style={{ opacity: 0.6 }}>*</span></label>
-                    <div className="flex" style={{ height: "48px" }}>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Phone <span style={{ opacity: 0.6 }}>*</span></label>
+                    <div className="flex" style={{ height: "56px" }}>
                       <div
-                        className="flex items-center gap-1.5 px-3 shrink-0"
+                        className="flex items-center gap-1.5 px-4 shrink-0"
                         style={{
-                          background: "rgba(255,255,255,0.85)",
+                          background: "rgba(255,255,255,0.88)",
                           borderRight: "1px solid #ddd",
-                          borderRadius: "4px 0 0 4px",
+                          borderRadius: "6px 0 0 6px",
                           color: "#2C2C2C",
                           fontSize: "14px",
                         }}
@@ -514,60 +517,62 @@ export default function ContactPage() {
                       </div>
                       <input
                         type="tel"
-                        className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
+                        className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                         style={{
-                          background: "rgba(255,255,255,0.92)",
+                          background: "rgba(255,255,255,0.95)",
                           border: "none",
                           color: "#2C2C2C",
-                          borderRadius: "0 4px 4px 0",
+                          borderRadius: "0 6px 6px 0",
                         }}
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Postcode <span style={{ opacity: 0.6 }}>*</span></label>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Postcode <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255,255,255,0.95)",
                         border: "none",
                         color: "#2C2C2C",
-                        borderRadius: "4px",
-                        height: "48px",
+                        borderRadius: "6px",
+                        height: "56px",
                       }}
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                {/* Row 3: Email / Service */}
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "24px" }}>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>Email <span style={{ opacity: 0.6 }}>*</span></label>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>Email <span style={{ opacity: 0.6 }}>*</span></label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255,255,255,0.95)",
                         border: "none",
                         color: "#2C2C2C",
-                        borderRadius: "4px",
-                        height: "48px",
+                        borderRadius: "6px",
+                        height: "56px",
                       }}
                     />
                   </div>
                   <div>
-                    <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>What service are you looking for?</label>
+                    <label className="block" style={{ color: "#FFFFFF", fontSize: "14px", marginBottom: "10px" }}>What service are you looking for?</label>
                     <select
-                      className="w-full px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-white/30 appearance-none"
+                      className="w-full px-5 text-base focus:outline-none focus:ring-2 focus:ring-white/30 appearance-none"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255,255,255,0.95)",
                         border: "none",
                         color: "#2C2C2C",
-                        borderRadius: "4px",
-                        height: "48px",
+                        borderRadius: "6px",
+                        height: "56px",
                         backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
                         backgroundRepeat: "no-repeat",
-                        backgroundPosition: "right 14px center",
-                        paddingRight: "40px",
+                        backgroundPosition: "right 16px center",
+                        paddingRight: "44px",
                       }}
                     >
                       <option value="">Select...</option>
@@ -578,23 +583,27 @@ export default function ContactPage() {
                     </select>
                   </div>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 mt-10 text-sm tracking-wide transition-all duration-300 hover:opacity-90"
-                  style={{
-                    background: "#D9DDD6",
-                    color: "#000000",
-                    border: "none",
-                    cursor: "pointer",
-                    fontSize: "13px",
-                    borderRadius: "20px",
-                    fontFamily: "var(--font-body)",
-                    fontWeight: 400,
-                    height: "48px",
-                  }}
-                >
-                  Submit
-                </button>
+
+                {/* Submit */}
+                <div style={{ marginTop: "20px" }}>
+                  <button
+                    type="submit"
+                    className="w-full text-sm tracking-wide transition-all duration-300 hover:opacity-90"
+                    style={{
+                      background: "#D9DDD6",
+                      color: "#000000",
+                      border: "none",
+                      cursor: "pointer",
+                      fontSize: "14px",
+                      borderRadius: "28px",
+                      fontFamily: "var(--font-body)",
+                      fontWeight: 400,
+                      height: "56px",
+                    }}
+                  >
+                    Submit
+                  </button>
+                </div>
               </form>
             </div>
           </div>
