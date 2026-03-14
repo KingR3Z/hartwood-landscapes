@@ -27,7 +27,7 @@ export default function Services() {
     <section ref={sectionRef} className="bg-white">
       {/* Full-width Tab Headers — evenly spaced like reference */}
       <div
-        className="reveal-item"
+        className="reveal-item services-tab-bar"
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${servicesData.tabs.length}, 1fr)`,

@@ -120,7 +120,7 @@ export default function Hero() {
       {/* Content — bottom-left aligned like reference */}
       <div
         className="absolute inset-0 flex flex-col justify-end"
-        style={{ padding: "0 clamp(60px, 6vw, 120px) clamp(60px, 8vh, 120px)", zIndex: 3 }}
+        style={{ padding: "0 clamp(24px, 6vw, 120px) clamp(40px, 8vh, 120px)", zIndex: 3 }}
       >
         <h1
           ref={titleRef}

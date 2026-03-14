@@ -62,7 +62,7 @@ export default function Intro() {
           {/* Image — right side, LARGE CIRCLE masked like reference */}
           <div className="reveal-item relative flex justify-center" style={{ overflow: "visible" }}>
             <div
-              className="relative overflow-hidden"
+              className="intro-circle-wrap relative overflow-hidden"
               style={{
                 width: "min(580px, 42vw)",
                 height: "min(580px, 42vw)",

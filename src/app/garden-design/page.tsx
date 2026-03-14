@@ -234,7 +234,7 @@ export default function GardenDesignPage() {
             {designProcess.map((item, i) => (
               <div
                 key={i}
-                className="reveal-item grid grid-cols-[60px_1fr] gap-6 items-start"
+                className="reveal-item grid grid-cols-[40px_1fr] sm:grid-cols-[60px_1fr] gap-4 sm:gap-6 items-start"
                 style={{
                   paddingBottom: i < designProcess.length - 1 ? "clamp(32px, 4vw, 48px)" : "0",
                   marginBottom: i < designProcess.length - 1 ? "clamp(32px, 4vw, 48px)" : "0",
@@ -321,7 +321,7 @@ export default function GardenDesignPage() {
                 Arrange an initial garden design consultation.
               </p>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>First name *</label>
                     <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
@@ -331,7 +331,7 @@ export default function GardenDesignPage() {
                     <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Phone *</label>
                     <input type="tel" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
@@ -341,7 +341,7 @@ export default function GardenDesignPage() {
                     <input type="text" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs mb-2" style={{ color: "var(--white)" }}>Email *</label>
                     <input type="email" className="w-full px-4 py-3 rounded-sm text-sm focus:outline-none" style={{ background: "rgba(255,255,255,0.9)", border: "none", color: "var(--charcoal)" }} />

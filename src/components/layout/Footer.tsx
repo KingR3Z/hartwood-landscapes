@@ -115,7 +115,7 @@ export default function Footer() {
 
           {/* Awards / Badges placeholder */}
           <div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
               <div
                 className="flex items-center justify-center"
                 style={{
