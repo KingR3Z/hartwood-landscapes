@@ -7,7 +7,8 @@ export const mainNav = {
       label: "Garden Design",
       href: "/garden-design",
       children: [
-        { label: "Portfolio", href: "/our-gardens" },
+        { label: "Our Gardens", href: "/our-gardens" },
+        { label: "Portfolio", href: "/portfolio" },
       ],
     },
     { label: "About Us", href: "/about" },
