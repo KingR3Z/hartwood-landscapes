@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section ref={sectionRef} style={{ background: "#8A9A84" }} className="section-padding">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Left: Text */}
           <div>
             <h2
@@ -47,7 +47,7 @@ export default function CTASection() {
           {/* Right: Form */}
           <div className="reveal-item">
             <p
-              className="font-display mb-12"
+              className="font-display mb-6 lg:mb-12"
               style={{
                 fontSize: "clamp(20px, 2vw, 26px)",
                 fontWeight: 300,

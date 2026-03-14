@@ -9,7 +9,7 @@ export default function WhyChoose() {
   const sectionRef = useReveal(".reveal-item", 0.1);
 
   return (
-    <section ref={sectionRef} className="relative" style={{ minHeight: "600px" }}>
+    <section ref={sectionRef} className="relative" style={{ minHeight: "min(600px, 80vh)" }}>
       {/* Full-width background image */}
       <Image
         src={whyChooseData.image}
@@ -22,7 +22,7 @@ export default function WhyChoose() {
       {/* Centered card overlay */}
       <div
         className="relative z-10 flex items-center justify-center"
-        style={{ minHeight: "600px", padding: "clamp(40px, 5vw, 80px) clamp(20px, 3vw, 40px)" }}
+        style={{ minHeight: "min(600px, 80vh)", padding: "clamp(24px, 5vw, 80px) clamp(16px, 3vw, 40px)" }}
       >
         <div
           className="reveal-item"

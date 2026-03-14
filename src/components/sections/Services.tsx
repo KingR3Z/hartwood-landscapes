@@ -33,6 +33,8 @@ export default function Services() {
           gridTemplateColumns: `repeat(${servicesData.tabs.length}, 1fr)`,
           borderTop: "1px solid #e8e6e1",
           borderBottom: "1px solid #e8e6e1",
+          overflowX: "auto",
+          WebkitOverflowScrolling: "touch",
         }}
       >
         {servicesData.tabs.map((t, i) => (
@@ -41,7 +43,7 @@ export default function Services() {
             onClick={() => setActiveTab(i)}
             className="py-5 text-center transition-all duration-300"
             style={{
-              fontSize: "clamp(10px, 0.9vw, 13px)",
+              fontSize: "clamp(10px, 2.5vw, 13px)",
               letterSpacing: "0.15em",
               fontWeight: 400,
               fontFamily: "var(--font-body)",
@@ -52,6 +54,7 @@ export default function Services() {
               cursor: "pointer",
               textTransform: "uppercase" as const,
               padding: "20px 8px",
+              minWidth: "120px",
             }}
           >
             {t.label}
@@ -62,7 +65,7 @@ export default function Services() {
       {/* Tab Content — image left, text right */}
       <div className="section-padding">
         <div className="container-custom">
-          <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
             {/* Image — left side, tall arch-shaped like reference */}
             <div className="relative overflow-hidden" style={{ borderRadius: "300px 300px 0 0", aspectRatio: "3/4" }}>
               <Image

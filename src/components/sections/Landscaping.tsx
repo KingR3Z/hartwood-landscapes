@@ -10,9 +10,9 @@ export default function Landscaping() {
 
   return (
     <section ref={sectionRef} className="bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2" style={{ minHeight: "600px" }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[600px]">
         {/* Image — left side, full height, edge-to-edge */}
-        <div className="reveal-item relative order-2 lg:order-1" style={{ minHeight: "400px" }}>
+        <div className="reveal-item relative order-2 lg:order-1 min-h-[250px] lg:min-h-[400px]">
           <Image
             src={landscapingData.image}
             alt="Luxury landscaping build"
