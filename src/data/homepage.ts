@@ -11,7 +11,7 @@ export const introData = {
     "Explore a curated selection of our completed projects within our Portfolio.",
   ],
   cta: { label: "Get a Free Quote", href: "/contact" },
-  image: "/images/projects/project-01.jpg",
+  image: "/images/intro-circle.jpg",
 };
 
 export const servicesData = {
@@ -22,7 +22,7 @@ export const servicesData = {
       text: "We specialise in premium block paving driveways in herringbone, basket weave and stretcher bond patterns. From charcoal to gold tones, we work with top suppliers like Marshalls and Bradstone to deliver driveways that look stunning and last for decades.",
       tagline: "Transform your kerb appeal with a driveway built to the highest standards.",
       cta: { label: "Read More", href: "/garden-design" },
-      image: "/images/projects/project-02.jpg",
+      image: "/images/service-driveways.jpg",
     },
     {
       label: "PATIOS & GARDEN LANDSCAPING",
@@ -30,7 +30,7 @@ export const servicesData = {
       text: "From Indian stone patios to complete garden transformations, we create outdoor spaces designed for everyday living. Our landscaping service covers everything from design through to the final finish.",
       tagline: "Your garden, reimagined.",
       cta: { label: "Read More", href: "/garden-design" },
-      image: "/images/projects/project-03.jpg",
+      image: "/images/service-patios.jpg",
     },
     {
       label: "FENCING & BOUNDARIES",
@@ -38,7 +38,7 @@ export const servicesData = {
       text: "Quality timber fencing with brick pillars, post caps and matching gates. We install lap panels, close board and decorative fencing to give your property privacy and style.",
       tagline: "Secure boundaries that look as good as they perform.",
       cta: { label: "Read More", href: "/garden-design" },
-      image: "/images/projects/project-04.jpg",
+      image: "/images/service-fencing.jpg",
     },
     {
       label: "ARTIFICIAL LAWNS",
@@ -46,7 +46,7 @@ export const servicesData = {
       text: "Low-maintenance artificial grass that looks and feels natural all year round. We prepare the ground properly and install premium turf so your lawn stays perfect without the upkeep.",
       tagline: "A perfect lawn, every day of the year.",
       cta: { label: "Read More", href: "/garden-design" },
-      image: "/images/projects/project-05.jpg",
+      image: "/images/service-lawns.jpg",
     },
   ],
 };
@@ -59,7 +59,7 @@ export const whyChooseData = {
     "From the first site visit through to the final clean-up, we provide a fully hands-on service at every stage. No subcontractors, no shortcuts.",
     "We work with premium suppliers like Marshalls, Bradstone, Tobermore and Tarmac to ensure the best materials for every project.",
   ],
-  image: "/images/projects/project-06.jpg",
+  image: "/images/why-choose-new.jpg",
 };
 
 export const philosophyData = {
@@ -70,7 +70,7 @@ export const philosophyData = {
     "We're proud of our work and we want you to be too. That's why we guarantee quality on every project and keep you updated throughout the build process.",
   ],
   cta: { label: "See How We Work", href: "/about" },
-  image: "/images/projects/project-07.jpg",
+  image: "/images/philosophy-main.jpg",
 };
 
 export const landscapingData = {
@@ -80,7 +80,7 @@ export const landscapingData = {
     "Our experienced team works together on every project, ensuring consistent quality from start to finish. We take pride in leaving every site clean and every customer happy.",
   ],
   cta: { label: "View Our Projects", href: "/our-gardens" },
-  image: "/images/projects/project-08.jpg",
+  image: "/images/landscaping-main.jpg",
 };
 
 export const ctaData = {

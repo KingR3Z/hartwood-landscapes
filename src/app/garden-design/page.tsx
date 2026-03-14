@@ -27,7 +27,7 @@ export default function GardenDesignPage() {
       <PageHero
         title="Garden Design"
         subtitle="Bespoke luxury garden design for exceptional homes"
-        image="/images/projects/project-02.jpg"
+        image="/images/garden-premium.jpg"
       />
 
       {/* Intro — text left + image right */}
@@ -78,7 +78,7 @@ export default function GardenDesignPage() {
             </div>
             <div className="reveal-item relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/projects/project-01.jpg"
+                src="/images/service-driveways.jpg"
                 alt="Bespoke garden design"
                 fill
                 className="object-cover"
@@ -144,7 +144,7 @@ export default function GardenDesignPage() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/projects/project-03.jpg"
+                  src="/images/service-patios.jpg"
                   alt="Contemporary courtyard design"
                   fill
                   className="object-cover"
@@ -172,7 +172,7 @@ export default function GardenDesignPage() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/projects/project-05.jpg"
+                  src="/images/service-lawns.jpg"
                   alt="Garden design detail"
                   fill
                   className="object-cover"

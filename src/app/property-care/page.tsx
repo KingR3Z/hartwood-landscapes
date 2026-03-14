@@ -63,7 +63,7 @@ export default function PropertyCarePage() {
       {/* Full-Bleed Hero */}
       <section className="relative" style={{ height: "100vh", minHeight: "600px" }}>
         <Image
-          src="/images/projects/project-06.jpg"
+          src="/images/garden-premium.jpg"
           alt="Property care"
           fill
           className="object-cover"

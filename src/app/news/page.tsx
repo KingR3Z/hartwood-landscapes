@@ -14,7 +14,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "4 min read",
     category: "Garden Design Trends",
-    image: "/images/projects/project-01.jpg",
+    image: "/images/garden-fullwidth.jpg",
     slug: "chelsea-2026-preview",
   },
   {
@@ -24,7 +24,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "5 min read",
     category: "Garden Design Trends",
-    image: "/images/projects/project-03.jpg",
+    image: "/images/philosophy-main.jpg",
     slug: "winter-garden-structure",
   },
   {
@@ -34,7 +34,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "3 min read",
     category: "Garden Design Trends",
-    image: "/images/projects/project-05.jpg",
+    image: "/images/service-patios.jpg",
     slug: "kensington-courtyard-spotlight",
   },
   {
@@ -44,7 +44,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "4 min read",
     category: "Garden Maintenance",
-    image: "/images/projects/project-07.jpg",
+    image: "/images/landscaping-main.jpg",
     slug: "autumn-maintenance-tips",
   },
   {
@@ -54,7 +54,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "4 min read",
     category: "Garden Design Trends",
-    image: "/images/projects/project-02.jpg",
+    image: "/images/service-lawns.jpg",
     slug: "planting-for-pollinators",
   },
   {
@@ -64,7 +64,7 @@ const newsArticles = [
     author: "James Garden & Driveways",
     readTime: "3 min read",
     category: "Garden Maintenance",
-    image: "/images/projects/project-04.jpg",
+    image: "/images/service-fencing.jpg",
     slug: "spring-garden-preparation",
   },
 ];
