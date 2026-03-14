@@ -279,6 +279,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   About Page — Hero Entrance Animations (CSS keyframes, no rAF dependency)
+   ============================================ */
+
+@keyframes aboutHeroFadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aboutHeroScaleIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.about-hero-item {
+  opacity: 0;
+  animation: aboutHeroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.about-hero-item:nth-child(1) { animation-delay: 0.2s; }
+.about-hero-item:nth-child(2) { animation-delay: 0.35s; }
+.about-hero-item:nth-child(3) { animation-delay: 0.5s; }
+.about-hero-item:nth-child(4) { animation-delay: 0.65s; }
+
+.about-hero-image {
+  opacity: 0;
+  animation: aboutHeroScaleIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+
+/* About reveal variants — applied via useReveal + .revealed class */
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-slide-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-clip-right {
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: opacity 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+              clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.reveal-clip-right.revealed {
+  opacity: 1;
+  clip-path: inset(0 0% 0 0);
+}
+
+.reveal-scale-bounce {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal-scale-bounce.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-slide-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
    Image Hover
    ============================================ */
 
