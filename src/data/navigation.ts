@@ -7,18 +7,7 @@ export const mainNav = {
       label: "Garden Design",
       href: "/garden-design",
       children: [
-        { label: "Design Portfolio", href: "/our-gardens" },
-        { label: "Contemporary Gardens", href: "/garden-design" },
-        { label: "Traditional Gardens", href: "/garden-design" },
-      ],
-    },
-    {
-      label: "Our Gardens",
-      href: "/our-gardens",
-      children: [
-        { label: "Kensington Courtyard", href: "/our-gardens" },
-        { label: "Surrey Estate", href: "/our-gardens" },
-        { label: "Hampstead Modern", href: "/our-gardens" },
+        { label: "Portfolio", href: "/our-gardens" },
       ],
     },
     { label: "About Us", href: "/about" },

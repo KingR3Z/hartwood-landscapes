@@ -14,8 +14,8 @@ export default function OurGardensPage() {
   return (
     <InnerPageLayout>
       <PageHero
-        title="Our Signature Luxury Gardens"
-        overline="WHERE LUXURY MEETS OUTDOORS"
+        title="Portfolio"
+        overline="OUR WORK"
         image="/images/projects/project-04.jpg"
         centered
         ctaLabel="Begin Your Bespoke Garden Journey"
