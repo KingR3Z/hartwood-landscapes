@@ -163,27 +163,27 @@ export default function Navigation() {
         }`}
         style={{ paddingTop: "70px" }}
       >
-        <div className="flex flex-col justify-center h-full px-8">
-          <nav className="space-y-6">
+        <div className="flex flex-col h-full px-8 pt-10 pb-8 overflow-y-auto">
+          <nav className="flex flex-col gap-4">
             {mainNav.links.map((link) => (
               <div key={link.label}>
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block font-display text-3xl hover:opacity-60 transition-opacity"
-                  style={{ color: "var(--charcoal)" }}
+                  className="block font-display hover:opacity-60 transition-opacity"
+                  style={{ color: "var(--charcoal)", fontSize: "28px" }}
                 >
                   {link.label}
                 </Link>
                 {link.children && (
-                  <div className="mt-2 ml-4 space-y-2">
+                  <div className="mt-1 ml-1 flex flex-col gap-1">
                     {link.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-lg hover:opacity-60 transition-opacity"
-                        style={{ color: "var(--warm-grey)" }}
+                        className="block hover:opacity-60 transition-opacity"
+                        style={{ color: "var(--warm-grey)", fontSize: "16px" }}
                       >
                         {child.label}
                       </Link>
@@ -193,7 +193,7 @@ export default function Navigation() {
               </div>
             ))}
           </nav>
-          <div className="mt-12">
+          <div className="mt-auto pt-8">
             <Link
               href={mainNav.cta.href}
               onClick={() => setMobileOpen(false)}
