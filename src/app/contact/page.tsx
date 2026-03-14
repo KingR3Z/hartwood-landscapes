@@ -454,7 +454,7 @@ export default function ContactPage() {
               >
                 Arrange an initial garden design consultation and tell us about your project.
               </p>
-              <form className="form-reveal reveal-item space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="form-reveal reveal-item space-y-7" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block mb-2" style={{ color: "#FFFFFF", fontSize: "14px" }}>First name <span style={{ opacity: 0.6 }}>*</span></label>
@@ -570,7 +570,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3 mt-4 text-sm tracking-wide transition-all duration-300 hover:opacity-90"
+                  className="w-full py-3 mt-10 text-sm tracking-wide transition-all duration-300 hover:opacity-90"
                   style={{
                     background: "#D9DDD6",
                     color: "#000000",
