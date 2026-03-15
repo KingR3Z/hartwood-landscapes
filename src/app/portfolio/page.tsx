@@ -219,8 +219,8 @@ export default function PortfolioPage() {
         style={{ height: "70vh", minHeight: "450px" }}
       >
         <Image
-          src="/images/projects/project-03.jpg"
-          alt="Portfolio — Herringbone Block Paving Driveway"
+          src="/images/project-03-hd.png"
+          alt="Portfolio — AI-Enhanced Herringbone Block Paving Driveway"
           fill
           className="object-cover"
           priority
