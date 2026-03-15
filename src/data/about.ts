@@ -32,7 +32,7 @@ export const coreValues = [
 export const directorData = {
   name: "James Garden & Driveways",
   role: "Design Director",
-  image: "/images/director-portrait.jpg",
+  image: "/images/director-portrait-v2.jpg",
   bio: [
     "James Garden & Driveways founded Garden & Driveways in 2012 with a clear vision: to create outdoor spaces that elevate the way people live and experience their homes.",
     "With a degree in Landscape Architecture from the University of Greenwich, James brings a rigorous design methodology to every project. His approach combines classical proportions with contemporary sensibility, creating gardens that feel both timeless and fresh.",
