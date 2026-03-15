@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projectImages = [
   { src: "/images/projects/project-01.jpg", title: "Block Paved Driveway", location: "Newcastle-under-Lyme" },
   { src: "/images/projects/project-02.jpg", title: "Artificial Lawn & Patio", location: "Stoke-on-Trent" },
-  { src: "/images/projects/project-03.jpg", title: "Herringbone Block Paving", location: "Kidsgrove" },
+  /* project-03 is used as hero banner — skip to avoid duplicate */
   { src: "/images/projects/project-04.jpg", title: "Fencing & Brick Pillars", location: "Stone, Staffordshire" },
   { src: "/images/projects/project-05.jpg", title: "Red Granite Gravel Path", location: "Audley" },
   { src: "/images/projects/project-06.jpg", title: "Gold Block Paving Driveway", location: "Wolstanton" },
@@ -294,7 +294,7 @@ export default function PortfolioPage() {
             className="mt-4 max-w-lg mx-auto"
             style={{ color: "rgba(0,0,0,0.45)", fontSize: "14px", lineHeight: 1.8 }}
           >
-            47 completed driveways, patios, gardens and landscaping projects across Staffordshire
+            Completed driveways, patios, gardens and landscaping projects across Staffordshire
           </p>
         </div>
       </section>
