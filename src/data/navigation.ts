@@ -1,3 +1,5 @@
+type NavLink = { label: string; href: string; children?: { label: string; href: string }[] };
+
 export const mainNav = {
   logo: "G&D",
   cta: { label: "Get a Free Quote", href: "/contact" },
@@ -8,7 +10,7 @@ export const mainNav = {
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
     { label: "News", href: "/news" },
-  ],
+  ] as NavLink[],
 };
 
 export const footerData = {
