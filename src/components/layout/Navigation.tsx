@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { mainNav } from "@/data/navigation";
 
 export default function Navigation() {
@@ -24,7 +25,19 @@ export default function Navigation() {
           className="flex items-center justify-between"
           style={{ padding: "0 clamp(24px, 4vw, 64px)", height: "70px" }}
         >
-          {/* Desktop Nav — links spread evenly across full width, no logo */}
+          {/* Logo — top left */}
+          <Link href="/" className="desktop-nav shrink-0 mr-6" style={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src="/images/logo-gd.png"
+              alt="Garden & Driveways"
+              width={120}
+              height={60}
+              style={{ objectFit: "contain", height: "50px", width: "auto" }}
+              priority
+            />
+          </Link>
+
+          {/* Desktop Nav — links spread evenly */}
           <nav className="desktop-nav items-center gap-0 flex-1">
             {mainNav.links.map((link) => (
               <div
@@ -98,13 +111,18 @@ export default function Navigation() {
             ))}
           </nav>
 
-          {/* Mobile: Brand name (hidden on desktop via CSS) */}
+          {/* Mobile: Logo (hidden on desktop via CSS) */}
           <Link
             href="/"
-            className="mobile-brand font-display text-lg tracking-wide"
-            style={{ color: "var(--charcoal)" }}
+            className="mobile-brand items-center"
           >
-            Garden & Driveways
+            <Image
+              src="/images/logo-gd.png"
+              alt="Garden & Driveways"
+              width={100}
+              height={50}
+              style={{ objectFit: "contain", height: "40px", width: "auto" }}
+            />
           </Link>
 
           {/* CTA Button — outline style like reference */}

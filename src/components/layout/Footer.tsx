@@ -1,38 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { footerData } from "@/data/navigation";
 
 export default function Footer() {
   return (
     <footer style={{ background: "#C1C7BF" }}>
       <div className="container-custom" style={{ paddingTop: "100px", paddingBottom: "40px" }}>
-        {/* Logo / Monogram */}
+        {/* Logo */}
         <div style={{ marginBottom: "0" }}>
-          <h2
-            className="font-display"
-            style={{
-              fontSize: "clamp(48px, 5vw, 72px)",
-              fontWeight: 400,
-              color: "#2C2713",
-              letterSpacing: "0.15em",
-              lineHeight: 1,
-            }}
-          >
-            {footerData.logo}
-          </h2>
-          <p
-            style={{
-              fontSize: "12px",
-              fontWeight: 500,
-              color: "#2C2713",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase",
-              marginTop: "12px",
-            }}
-          >
-            {footerData.tagline}
-          </p>
+          <Link href="/">
+            <Image
+              src="/images/logo-gd.png"
+              alt="Garden & Driveways"
+              width={180}
+              height={90}
+              style={{ objectFit: "contain", height: "80px", width: "auto" }}
+            />
+          </Link>
           <p
             style={{
               fontSize: "10px",
