@@ -74,7 +74,7 @@ export default function WhyChoose() {
               About Us <span>→</span>
             </Link>
             <a
-              href="tel:01892489923"
+              href="tel:07470867661"
               className="font-display"
               style={{
                 color: "var(--charcoal)",
@@ -83,7 +83,7 @@ export default function WhyChoose() {
                 textUnderlineOffset: "4px",
               }}
             >
-              01892 489 923
+              07470 867661
             </a>
           </div>
         </div>

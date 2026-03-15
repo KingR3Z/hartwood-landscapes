@@ -1,8 +1,8 @@
 export const contactHeroData = {
-  overline: "LUXURIOUS OUTDOOR LIVING",
+  overline: "GET IN TOUCH",
   heading:
-    "Contact Garden & Driveways to create your perfect outdoor living space.",
-  text: "Whether you are considering a full garden redesign, a landscaping project, or simply want some expert advice, we are here to help. Get in touch and we will arrange a convenient time to discuss your vision.",
+    "Contact Garden & Driveways for a free, no-obligation quote.",
+  text: "Whether you need a new driveway, patio, garden landscaping, or just want some honest advice, we're here to help. Get in touch and we'll arrange a convenient time to visit your property.",
   image: "/images/garden-consultation-v2.jpg",
 };
 
@@ -10,67 +10,65 @@ export const contactMethods = [
   {
     icon: "email",
     label: "Email Us",
-    value: "design@gardenanddriveways.co.uk",
-    href: "mailto:design@gardenanddriveways.co.uk",
+    value: "sales@gardenanddriveways.co.uk",
+    href: "mailto:sales@gardenanddriveways.co.uk",
   },
   {
     icon: "phone",
     label: "Call Us",
-    value: "01892 489 923",
-    href: "tel:01892489923",
+    value: "07470 867661",
+    href: "tel:07470867661",
   },
   {
     icon: "whatsapp",
     label: "WhatsApp",
-    value: "07375 89 29 29",
-    href: "https://wa.me/447375892929",
+    value: "07470 867661",
+    href: "https://wa.me/447470867661",
   },
 ];
 
 export const locationData = {
   address: [
-    "Garden & Driveways House",
-    "42 High Street",
-    "Tunbridge Wells",
-    "Kent, TN1 1XP",
+    "Garden & Driveways",
+    "20 Leech Ave",
+    "Newcastle-under-Lyme",
+    "Staffordshire, ST5 7PN",
   ],
   image: "/images/office.jpg",
 };
 
 export const hoursData = {
   hours: [
-    { day: "Monday — Friday", time: "9:00 AM — 5:00 PM" },
-    { day: "Saturday", time: "By appointment" },
+    { day: "Monday — Friday", time: "8:30 AM — 4:00 PM" },
+    { day: "Saturday", time: "8:30 AM — 2:00 PM" },
     { day: "Sunday & Bank Holidays", time: "Closed" },
   ],
 };
 
 export const socialLinks = [
-  { label: "Instagram", href: "#" },
   { label: "Facebook", href: "#" },
-  { label: "Houzz", href: "#" },
-  { label: "Pinterest", href: "#" },
+  { label: "Instagram", href: "#" },
 ];
 
 export const exploreServices = [
   {
-    title: "Garden & Landscape Design",
+    title: "Driveways & Block Paving",
     image: "/images/service-patios-v2.jpg",
     href: "/garden-design",
   },
   {
-    title: "Landscaping & Garden Build",
+    title: "Patios & Paving",
     image: "/images/landscaping-main-v2.jpg",
     href: "/garden-design",
   },
   {
-    title: "Planting Schemes",
+    title: "Garden Landscaping",
     image: "/images/service-lawns-v2.jpg",
     href: "/garden-design",
   },
   {
-    title: "Garden Styling",
-    image: "/images/philosophy-main-v2.jpg",
+    title: "Fencing & Boundaries",
+    image: "/images/service-fencing-v2.jpg",
     href: "/garden-design",
   },
 ];

@@ -358,10 +358,7 @@ export default function AboutPage() {
                       margin: "8px 0",
                     }}
                   >
-                    Best of Houzz
-                  </p>
-                  <p style={{ color: "var(--white)", fontSize: "11px", letterSpacing: "0.1em" }}>
-                    Winner
+                    {award.title}
                   </p>
                   <p
                     className="font-display"

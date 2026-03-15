@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { heroData } from "@/data/homepage";
@@ -11,6 +11,13 @@ export default function Hero() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoSrc, setVideoSrc] = useState("");
+
+  // Pick the right video based on screen width
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    setVideoSrc(isMobile ? "/videos/hero-bg-mobile.mp4" : "/videos/hero-bg-desktop.mp4");
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -68,18 +75,20 @@ export default function Hero() {
       style={{ height: "calc(100vh - 100px)", marginTop: "100px", minHeight: "500px" }}
     >
       {/* Background Video — project-03 herringbone block paving, animated with Kling 3.0 */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/hero-driveway-4k.jpg"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 1 }}
-      >
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
-      </video>
+      {videoSrc && (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/project-03-hd.png"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 1 }}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      )}
 
       {/* Dark Overlay — strong gradient for white text readability */}
       <div

@@ -219,7 +219,7 @@ export default function Footer() {
                       margin: 0,
                     }}
                   >
-                    DESIGN
+                    REVIEWS
                   </p>
                   <p
                     className="font-display"
@@ -231,10 +231,10 @@ export default function Footer() {
                       margin: "8px 0 4px",
                     }}
                   >
-                    Best of Houzz
+                    Google Reviews
                   </p>
                   <p style={{ color: "#FFFFFF", fontSize: "12px", letterSpacing: "0.05em", margin: 0 }}>
-                    Winner
+                    4.9 Stars
                   </p>
                   <p
                     className="font-display"
@@ -286,10 +286,10 @@ export default function Footer() {
                       margin: "8px 0 4px",
                     }}
                   >
-                    Best of Houzz
+                    Five-Star Reviews
                   </p>
                   <p style={{ color: "#FFFFFF", fontSize: "12px", letterSpacing: "0.05em", margin: 0 }}>
-                    Winner
+                    54 Reviews
                   </p>
                   <p
                     className="font-display"

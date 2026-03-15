@@ -294,7 +294,7 @@ export default function GardenDesignPage() {
               </p>
               <p className="reveal-item mt-6">
                 <a
-                  href="tel:01892489923"
+                  href="tel:07470867661"
                   className="font-display"
                   style={{
                     color: "var(--white)",
@@ -303,7 +303,7 @@ export default function GardenDesignPage() {
                     textUnderlineOffset: "4px",
                   }}
                 >
-                  01892 489 923
+                  07470 867661
                 </a>
               </p>
             </div>

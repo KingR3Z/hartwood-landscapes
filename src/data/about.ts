@@ -1,9 +1,9 @@
 export const aboutHeaderData = {
-  overline: "ABOUT HARTWOOD LANDSCAPES",
-  heading: "Bespoke Garden Design and Build Studio",
+  overline: "ABOUT GARDEN & DRIVEWAYS",
+  heading: "Professional Paving, Patios & Landscaping",
   paragraphs: [
-    "Garden & Driveways is an award-winning garden design and landscaping studio based in Tunbridge Wells, Kent. We specialise in creating exceptional outdoor living spaces for discerning homeowners across the South East.",
-    "With over a decade of experience, our team brings together landscape architecture, horticulture, and fine craftsmanship to deliver gardens that are as functional as they are beautiful.",
+    "Garden & Driveways is a trusted paving and landscaping company based in Newcastle-under-Lyme, Staffordshire. We specialise in creating beautiful driveways, patios, and outdoor living spaces for homeowners across Staffordshire and the surrounding areas.",
+    "With years of hands-on experience, our team delivers quality craftsmanship on every project — from block paving driveways to complete garden transformations.",
   ],
   image: "/images/about-landscape-v2.jpg",
 };
@@ -30,25 +30,25 @@ export const coreValues = [
 ];
 
 export const directorData = {
-  name: "James Garden & Driveways",
-  role: "Design Director",
+  name: "Matt",
+  role: "Director",
   image: "/images/director-portrait-v2.jpg",
   bio: [
-    "James Garden & Driveways founded Garden & Driveways in 2012 with a clear vision: to create outdoor spaces that elevate the way people live and experience their homes.",
-    "With a degree in Landscape Architecture from the University of Greenwich, James brings a rigorous design methodology to every project. His approach combines classical proportions with contemporary sensibility, creating gardens that feel both timeless and fresh.",
-    "James is passionate about the relationship between architecture and landscape, believing that the most successful gardens are those that feel like a natural extension of the home. Every project begins with a deep understanding of the site, the architecture, and the people who will enjoy the space.",
-    "Under James's direction, Garden & Driveways has been recognised as a Best of Houzz winner for both Design and Service, reflecting a continued commitment to excellence at every stage of the process.",
-    "When not designing gardens, James can be found exploring the gardens of the National Trust, sketching in the Kent countryside, or tending to his own garden in Tunbridge Wells.",
+    "Matt founded Garden & Driveways in 2020 with a straightforward mission: to deliver high-quality paving, patios, and landscaping at fair prices for homeowners across Staffordshire.",
+    "With years of hands-on experience in the trade, Matt takes a practical, no-nonsense approach to every project. From herringbone block paving driveways to full garden transformations, he ensures every job is completed to the highest standard.",
+    "Matt is passionate about delivering results that homeowners can be proud of. Every project starts with a proper site visit, a clear quote, and an honest conversation about what will work best for the space and the budget.",
+    "Under Matt's leadership, Garden & Driveways has built a strong reputation in Newcastle-under-Lyme and the wider Staffordshire area, with a 4.9-star rating on Google from over 50 five-star reviews.",
+    "When he's not on site, Matt can be found spending time with his family or working on his own garden projects at home in Staffordshire.",
   ],
-  cta: { label: "Contact James", href: "/contact" },
+  cta: { label: "Contact Matt", href: "/contact" },
 };
 
 export const missionData = {
   heading: "Our Mission",
   paragraphs: [
-    "At Garden & Driveways, our mission is to create outdoor living spaces that enhance the way our clients experience their homes. We believe that a beautifully designed garden is not a luxury — it is an essential part of a well-lived life.",
-    "We approach every project as a unique design challenge, drawing on our expertise in landscape architecture, horticulture, and construction to deliver gardens that are thoughtfully planned, beautifully crafted, and built to endure.",
-    "As a design-led studio, we are committed to pushing the boundaries of what is possible in residential garden design, while always respecting the character of the site, the architecture of the home, and the aspirations of our clients.",
+    "At Garden & Driveways, our mission is to deliver professional paving, patios, and landscaping that homeowners can be proud of. We believe every home deserves a quality outdoor space — and we make that happen at a fair price.",
+    "We approach every project with the same attention to detail, whether it's a new block paving driveway or a full garden transformation. Our team takes pride in clean workmanship, honest pricing, and completing jobs on time.",
+    "As a local Staffordshire business, we're committed to building lasting relationships with our customers. We treat every property as if it were our own, and we don't cut corners.",
   ],
   image: "/images/mission-bg-v2.jpg",
 };
@@ -56,18 +56,17 @@ export const missionData = {
 export const partnersData = {
   heading: "Our Trusted Partners",
   partners: [
-    { name: "London Stone", logo: null },
     { name: "Marshalls", logo: null },
-    { name: "Green-tech", logo: null },
-    { name: "Rolawn", logo: null },
+    { name: "Bradstone", logo: null },
+    { name: "Tobermore", logo: null },
+    { name: "Tarmac", logo: null },
   ],
 };
 
 export const awardsData = {
-  heading: "Celebrating Excellence in Garden Design",
+  heading: "Recognised for Quality & Service",
   awards: [
-    { title: "Best of Houzz — Design", year: "2026", category: "DESIGN" },
-    { title: "Best of Houzz — Service", year: "2026", category: "SERVICE" },
-    { title: "Best of Houzz — Service", year: "2025", category: "SERVICE" },
+    { title: "Google Reviews — 4.9 Stars", year: "2026", category: "REVIEWS" },
+    { title: "54 Five-Star Reviews", year: "2026", category: "SERVICE" },
   ],
 };

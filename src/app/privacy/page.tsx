@@ -48,14 +48,14 @@ export default function PrivacyPage() {
               Your Rights
             </h2>
             <p>
-              You have the right to access, correct, or delete your personal data at any time. To exercise these rights, please contact us at design@gardenanddriveways.co.uk.
+              You have the right to access, correct, or delete your personal data at any time. To exercise these rights, please contact us at sales@gardenanddriveways.co.uk.
             </p>
 
             <h2 style={{ color: "#2C2C2C", fontSize: "18px", fontWeight: 500, marginTop: "32px" }}>
               Contact
             </h2>
             <p>
-              If you have questions about this privacy policy, please contact us at design@gardenanddriveways.co.uk or call 01892 489 923.
+              If you have questions about this privacy policy, please contact us at sales@gardenanddriveways.co.uk or call 07470 867661.
             </p>
 
             <p style={{ marginTop: "40px", color: "#999", fontSize: "13px" }}>

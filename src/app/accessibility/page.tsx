@@ -45,7 +45,7 @@ export default function AccessibilityPage() {
               Feedback
             </h2>
             <p>
-              We welcome your feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at design@gardenanddriveways.co.uk or call 01892 489 923.
+              We welcome your feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at sales@gardenanddriveways.co.uk or call 07470 867661.
             </p>
 
             <p style={{ marginTop: "40px", color: "#999", fontSize: "13px" }}>
