@@ -16,7 +16,7 @@ export default function OurGardensPage() {
       <PageHero
         title="Our Signature Luxury Gardens"
         overline="WHERE LUXURY MEETS OUTDOORS"
-        image="/images/garden-fullwidth.jpg"
+        image="/images/garden-fullwidth-v2.jpg"
         centered
         ctaLabel="Begin Your Bespoke Garden Journey"
         ctaHref="/contact"

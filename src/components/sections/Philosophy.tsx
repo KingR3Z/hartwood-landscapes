@@ -69,7 +69,7 @@ export default function Philosophy() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/philosophy-2.jpg"
+                src="/images/philosophy-2-v2.jpg"
                 alt="Contemporary courtyard garden"
                 fill
                 className="object-cover"

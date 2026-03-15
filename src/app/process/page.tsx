@@ -202,7 +202,7 @@ export default function ProcessPage() {
           {/* Right: image */}
           <div className="relative overflow-hidden" style={{ minHeight: "400px" }}>
             <Image
-              src="/images/garden-consultation.jpg"
+              src="/images/garden-consultation-v2.jpg"
               alt="Our proven process"
               fill
               className="object-cover"

@@ -27,7 +27,7 @@ export default function GardenDesignPage() {
       <PageHero
         title="Garden Design"
         subtitle="Bespoke luxury garden design for exceptional homes"
-        image="/images/garden-premium.jpg"
+        image="/images/garden-premium-v2.jpg"
       />
 
       {/* Intro — text left + image right */}
@@ -78,7 +78,7 @@ export default function GardenDesignPage() {
             </div>
             <div className="reveal-item relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/service-driveways.jpg"
+                src="/images/service-driveways-v2.jpg"
                 alt="Bespoke garden design"
                 fill
                 className="object-cover"
@@ -92,7 +92,7 @@ export default function GardenDesignPage() {
       {/* Full-width image break */}
       <section className="relative" style={{ height: "50vh", minHeight: "350px" }}>
         <Image
-          src="/images/garden-fullwidth.jpg"
+          src="/images/garden-fullwidth-v2.jpg"
           alt="Luxury garden landscape"
           fill
           className="object-cover"
@@ -135,7 +135,7 @@ export default function GardenDesignPage() {
             <div className="space-y-5 h-full flex flex-col justify-center">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/garden-consultation.jpg"
+                  src="/images/garden-consultation-v2.jpg"
                   alt="Garden design consultation"
                   fill
                   className="object-cover"
@@ -144,7 +144,7 @@ export default function GardenDesignPage() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/service-patios.jpg"
+                  src="/images/service-patios-v2.jpg"
                   alt="Contemporary courtyard design"
                   fill
                   className="object-cover"
@@ -163,7 +163,7 @@ export default function GardenDesignPage() {
             <div className="space-y-5 h-full flex flex-col justify-center">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/garden-premium.jpg"
+                  src="/images/garden-premium-v2.jpg"
                   alt="Premium garden design"
                   fill
                   className="object-cover"
@@ -172,7 +172,7 @@ export default function GardenDesignPage() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/service-lawns.jpg"
+                  src="/images/service-lawns-v2.jpg"
                   alt="Garden design detail"
                   fill
                   className="object-cover"

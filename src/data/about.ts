@@ -5,7 +5,7 @@ export const aboutHeaderData = {
     "Garden & Driveways is an award-winning garden design and landscaping studio based in Tunbridge Wells, Kent. We specialise in creating exceptional outdoor living spaces for discerning homeowners across the South East.",
     "With over a decade of experience, our team brings together landscape architecture, horticulture, and fine craftsmanship to deliver gardens that are as functional as they are beautiful.",
   ],
-  image: "/images/about-landscape.jpg",
+  image: "/images/about-landscape-v2.jpg",
 };
 
 export const coreValues = [
@@ -50,7 +50,7 @@ export const missionData = {
     "We approach every project as a unique design challenge, drawing on our expertise in landscape architecture, horticulture, and construction to deliver gardens that are thoughtfully planned, beautifully crafted, and built to endure.",
     "As a design-led studio, we are committed to pushing the boundaries of what is possible in residential garden design, while always respecting the character of the site, the architecture of the home, and the aspirations of our clients.",
   ],
-  image: "/images/mission-bg.jpg",
+  image: "/images/mission-bg-v2.jpg",
 };
 
 export const partnersData = {

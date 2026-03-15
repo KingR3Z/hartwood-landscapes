@@ -3,7 +3,7 @@ export const contactHeroData = {
   heading:
     "Contact Garden & Driveways to create your perfect outdoor living space.",
   text: "Whether you are considering a full garden redesign, a landscaping project, or simply want some expert advice, we are here to help. Get in touch and we will arrange a convenient time to discuss your vision.",
-  image: "/images/garden-consultation.jpg",
+  image: "/images/garden-consultation-v2.jpg",
 };
 
 export const contactMethods = [
@@ -55,22 +55,22 @@ export const socialLinks = [
 export const exploreServices = [
   {
     title: "Garden & Landscape Design",
-    image: "/images/service-patios.jpg",
+    image: "/images/service-patios-v2.jpg",
     href: "/garden-design",
   },
   {
     title: "Landscaping & Garden Build",
-    image: "/images/landscaping-main.jpg",
+    image: "/images/landscaping-main-v2.jpg",
     href: "/garden-design",
   },
   {
     title: "Planting Schemes",
-    image: "/images/service-lawns.jpg",
+    image: "/images/service-lawns-v2.jpg",
     href: "/garden-design",
   },
   {
     title: "Garden Styling",
-    image: "/images/philosophy-main.jpg",
+    image: "/images/philosophy-main-v2.jpg",
     href: "/garden-design",
   },
 ];
