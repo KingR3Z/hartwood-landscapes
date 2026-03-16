@@ -1,13 +1,15 @@
+import { client } from "@/config/client";
+
 export const heroData = {
   title: "Quality Driveways & Gardens\nBuilt To Last",
-  subtitle: "PROFESSIONAL PAVING, PATIOS & LANDSCAPING IN STAFFORDSHIRE",
+  subtitle: `PROFESSIONAL PAVING, PATIOS & LANDSCAPING IN ${client.basedIn.toUpperCase()}`,
   image: "/images/hero-bg-v2.jpg",
 };
 
 export const introData = {
-  heading: "Transforming Outdoor Spaces Across Staffordshire",
+  heading: `Transforming Outdoor Spaces Across ${client.basedIn}`,
   text: [
-    "Based in Newcastle-under-Lyme and working across Staffordshire, our experienced team delivers high-quality driveways, patios, gardens and landscaping — all backed by 54 five-star reviews and a 4.9 Google rating.",
+    `Based in ${client.region} and working across ${client.basedIn}, our experienced team delivers high-quality driveways, patios, gardens and landscaping — all backed by 54 five-star reviews and a 4.9 Google rating.`,
     "Explore a curated selection of our completed projects within our Portfolio.",
   ],
   cta: { label: "Get a Free Quote", href: "/contact" },
@@ -52,12 +54,12 @@ export const servicesData = {
 };
 
 export const whyChooseData = {
-  title: "Why Choose Garden & Driveways?",
+  title: `Why Choose ${client.name}?`,
   paragraphs: [
-    "With 54 five-star Google reviews and a 4.9 rating, our reputation speaks for itself. We're a trusted local team delivering quality work across Staffordshire.",
+    `With 54 five-star Google reviews and a 4.9 rating, our reputation speaks for itself. We're a trusted local team delivering quality work across ${client.basedIn}.`,
     "Every project is approached with attention to detail, quality materials and honest pricing. We don't cut corners — we build to last.",
     "From the first site visit through to the final clean-up, we provide a fully hands-on service at every stage. No subcontractors, no shortcuts.",
-    "We work with premium suppliers like Marshalls, Bradstone, Tobermore and Tarmac to ensure the best materials for every project.",
+    `We work with premium suppliers like ${client.partners.map(p => p.name).join(", ")} to ensure the best materials for every project.`,
   ],
   image: "/images/why-choose-new-v2.jpg",
 };
@@ -70,7 +72,7 @@ export const philosophyData = {
     "We're proud of our work and we want you to be too. That's why we guarantee quality on every project and keep you updated throughout the build process.",
   ],
   cta: { label: "See How We Work", href: "/about" },
-  image: "/images/philosophy-main-v2.jpg",
+  image: "/images/projects/project-05.jpg",
 };
 
 export const landscapingData = {
@@ -86,7 +88,7 @@ export const landscapingData = {
 export const ctaData = {
   heading: "Ready To Start Your Project?",
   text: "Get in touch for a free, no-obligation quote. We'll come to you, discuss your ideas and give you an honest price.",
-  subtext: "Call us on 07470 867661 or fill in the form below and we'll get back to you within 24 hours.",
+  subtext: `Call us on ${client.phone} or fill in the form below and we'll get back to you within 24 hours.`,
 };
 
 export const projectsShowcase = [

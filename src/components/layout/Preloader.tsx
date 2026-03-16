@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useCallback } from "react";
 import gsap from "gsap";
+import { client } from "@/config/client";
 
 interface PreloaderProps {
   onComplete?: () => void;
@@ -67,7 +68,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           opacity: 0,
         }}
       >
-        Garden &amp; Driveways
+        {client.name}
       </h1>
     </div>
   );

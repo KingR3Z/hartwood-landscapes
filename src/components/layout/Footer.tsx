@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { footerData } from "@/data/navigation";
+import { client } from "@/config/client";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               src="/images/logo-gd.png"
-              alt="Garden & Driveways"
+              alt={client.name}
               width={180}
               height={90}
               style={{ objectFit: "contain", height: "100px", width: "auto" }}

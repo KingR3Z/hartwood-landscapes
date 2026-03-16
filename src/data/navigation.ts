@@ -1,7 +1,9 @@
+import { client, emailLink } from "@/config/client";
+
 type NavLink = { label: string; href: string; children?: { label: string; href: string }[] };
 
 export const mainNav = {
-  logo: "G&D",
+  logo: client.shortName,
   cta: { label: "Get a Free Quote", href: "/contact" },
   links: [
     { label: "Home", href: "/" },
@@ -14,14 +16,14 @@ export const mainNav = {
 };
 
 export const footerData = {
-  logo: "G D",
-  tagline: "GARDEN & DRIVEWAYS",
-  subtitle: "GARDENS | DRIVEWAYS | PATIOS | LANDSCAPING",
+  logo: client.logoInitials,
+  tagline: client.name.toUpperCase(),
+  subtitle: client.tagline,
   contact: {
     heading: "GET IN TOUCH",
-    address: ["20 Leech Ave", "Newcastle-under-Lyme", "Staffordshire", "ST5 7PN"],
-    phone: "07470 867661",
-    email: "sales@gardenanddriveways.co.uk",
+    address: client.address,
+    phone: client.phone,
+    email: client.email,
   },
   menu: {
     heading: "MENU",
@@ -38,10 +40,7 @@ export const footerData = {
   },
   socials: {
     heading: "FOLLOW US",
-    links: [
-      { label: "Facebook", href: "#" },
-      { label: "Instagram", href: "#" },
-    ],
+    links: client.socials,
   },
-  copyright: "2026 Garden & Driveways",
+  copyright: `2026 ${client.name}`,
 };

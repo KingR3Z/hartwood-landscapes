@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client } from "@/config/client";
 import { useReveal } from "@/hooks/useReveal";
 
 const newsArticles = [
@@ -11,7 +12,7 @@ const newsArticles = [
     title: "RHS Chelsea Flower Show 2026: Our Preview",
     excerpt: "As the Chelsea Flower Show approaches, we reflect on this year's themes and what trends we're seeing in luxury garden design for the season ahead.",
     date: "15 February 2026",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "4 min read",
     category: "Garden Design Trends",
     image: "/images/garden-fullwidth-v2.jpg",
@@ -21,7 +22,7 @@ const newsArticles = [
     title: "The Art of Winter Garden Structure",
     excerpt: "A well-designed garden reveals its true architecture in winter. Discover how we use evergreen structure, sculptural planting, and hardscape to create year-round beauty.",
     date: "28 January 2026",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "5 min read",
     category: "Garden Design Trends",
     image: "/images/philosophy-main-v2.jpg",
@@ -31,7 +32,7 @@ const newsArticles = [
     title: "Project Spotlight: Newcastle-under-Lyme Driveway",
     excerpt: "A behind-the-scenes look at our latest completed project — a full herringbone block paving driveway with charcoal borders and curved edging, transforming the front of a family home.",
     date: "12 January 2026",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "3 min read",
     category: "Garden Design Trends",
     image: "/images/service-patios-v2.jpg",
@@ -41,7 +42,7 @@ const newsArticles = [
     title: "Autumn Garden Maintenance Tips",
     excerpt: "Essential autumn maintenance tasks to protect your garden through winter and set the stage for a beautiful spring. From mulching to pruning, here is our expert guide.",
     date: "18 October 2025",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "4 min read",
     category: "Garden Maintenance",
     image: "/images/landscaping-main-v2.jpg",
@@ -51,7 +52,7 @@ const newsArticles = [
     title: "Planting for Pollinators: A Designer's Guide",
     excerpt: "How we integrate pollinator-friendly planting into our luxury garden designs without compromising on aesthetics — because ecological responsibility and beauty aren't mutually exclusive.",
     date: "18 December 2025",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "4 min read",
     category: "Garden Design Trends",
     image: "/images/service-lawns-v2.jpg",
@@ -61,7 +62,7 @@ const newsArticles = [
     title: "Garden Maintenance: Spring Preparation",
     excerpt: "A comprehensive guide to preparing your garden for the growing season. From soil health to early planting, everything you need to know for a stunning spring garden.",
     date: "23 May 2025",
-    author: "Garden & Driveways",
+    author: client.name,
     readTime: "3 min read",
     category: "Garden Maintenance",
     image: "/images/service-fencing-v2.jpg",

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client } from "@/config/client";
 import { useReveal } from "@/hooks/useReveal";
 import {
   aboutHeaderData,
@@ -69,7 +70,7 @@ export default function AboutPage() {
           <div className="about-hero-image relative" style={{ minHeight: "400px" }}>
             <Image
               src={aboutHeaderData.image}
-              alt="Garden & Driveways studio"
+              alt={`${client.name} studio`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -332,7 +333,7 @@ export default function AboutPage() {
           >
             {awardsData.heading}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" style={{ maxWidth: "768px", margin: "0 auto" }}>
             {awardsData.awards.map((award, i) => (
               <div
                 key={i}

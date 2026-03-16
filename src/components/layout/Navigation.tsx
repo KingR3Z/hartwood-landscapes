@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { mainNav } from "@/data/navigation";
+import { client, phoneLink, emailLink } from "@/config/client";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Navigation() {
                 color: "var(--charcoal)",
                 letterSpacing: "0.5px",
               }}>
-                Garden &amp; Driveways
+                {client.name}
               </span>
               <span style={{
                 fontSize: "9px",
@@ -144,7 +145,7 @@ export default function Navigation() {
                 color: "var(--charcoal)",
                 letterSpacing: "0.3px",
               }}>
-                Garden &amp; Driveways
+                {client.name}
               </span>
               <span style={{
                 fontSize: "9px",
@@ -264,11 +265,11 @@ export default function Navigation() {
               {mainNav.cta.label} <span>→</span>
             </Link>
             <div className="flex items-center justify-between" style={{ fontSize: "12px", color: "var(--warm-grey)" }}>
-              <a href="tel:07470867661" className="hover:opacity-60 transition-opacity" style={{ color: "var(--charcoal)", textDecoration: "none" }}>
-                07470 867661
+              <a href={phoneLink} className="hover:opacity-60 transition-opacity" style={{ color: "var(--charcoal)", textDecoration: "none" }}>
+                {client.phone}
               </a>
-              <a href="mailto:sales@gardenanddriveways.co.uk" className="hover:opacity-60 transition-opacity" style={{ color: "var(--charcoal)", textDecoration: "none" }}>
-                sales@gardenanddriveways.co.uk
+              <a href={emailLink} className="hover:opacity-60 transition-opacity" style={{ color: "var(--charcoal)", textDecoration: "none" }}>
+                {client.email}
               </a>
             </div>
           </div>

@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 /* ============================================
-   HARTWOOD LANDSCAPES — Design Tokens
-   $10k Tier: Clean, professional, no sidebar
+   LANDSCAPER TEMPLATE — Design Tokens
+   Edit src/config/client.ts for business info
+   Edit brand colors below for each client
    ============================================ */
 
 :root {
-  /* Colors */
+  /* === CLIENT BRAND COLORS — Change these per client === */
   --sage: #B5BFB0;
   --sage-dark: #8A9A84;
   --forest: #3D5A3E;
+  --gold: #C9A96E;
+  /* === END CLIENT BRAND COLORS === */
+
+  /* Neutral palette (rarely needs changing) */
   --charcoal: #2C2C2C;
   --warm-grey: #6B6B6B;
   --light-grey: #F5F3EF;
   --cream: #F9F7F4;
   --white: #FFFFFF;
-  --gold: #C9A96E;
 
   /* Typography */
   --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;

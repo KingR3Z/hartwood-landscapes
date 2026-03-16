@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client, phoneLink } from "@/config/client";
 import PageHero from "@/components/sections/PageHero";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -26,7 +27,7 @@ export default function GardenDesignPage() {
     <InnerPageLayout>
       <PageHero
         title="Our Services"
-        subtitle="Driveways, patios, gardens & landscaping across Staffordshire"
+        subtitle={`Driveways, patios, gardens & landscaping across ${client.basedIn}`}
         image="/images/garden-premium-v2.jpg"
       />
 
@@ -48,7 +49,7 @@ export default function GardenDesignPage() {
                 Premium Driveways, Patios & Landscaping
               </h2>
               <p className="reveal-item mb-5 leading-relaxed" style={{ color: "var(--warm-grey)", fontSize: "15px" }}>
-                We specialise in transforming outdoor spaces across Staffordshire — from striking block paving driveways to beautifully finished patios, garden landscaping, fencing, and artificial lawns. Every project is built to the highest standard using premium materials from trusted suppliers like Marshalls, Bradstone, and Tobermore.
+                We specialise in transforming outdoor spaces across {client.basedIn} — from striking block paving driveways to beautifully finished patios, garden landscaping, fencing, and artificial lawns. Every project is built to the highest standard using premium materials from trusted suppliers like Marshalls, Bradstone, and Tobermore.
               </p>
               <p className="reveal-item mb-5 leading-relaxed" style={{ color: "var(--warm-grey)", fontSize: "15px" }}>
                 Our hands-on team manages every project from start to finish — no subcontractors, no shortcuts. We take pride in delivering craftsmanship that stands the test of time, with attention to detail that sets us apart.
@@ -294,7 +295,7 @@ export default function GardenDesignPage() {
               </p>
               <p className="reveal-item mt-6">
                 <a
-                  href="tel:07470867661"
+                  href={phoneLink}
                   className="font-display"
                   style={{
                     color: "var(--white)",
@@ -303,7 +304,7 @@ export default function GardenDesignPage() {
                     textUnderlineOffset: "4px",
                   }}
                 >
-                  07470 867661
+                  {client.phone}
                 </a>
               </p>
             </div>

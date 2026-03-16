@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client, phoneLink } from "@/config/client";
 import { useReveal } from "@/hooks/useReveal";
 import {
   contactHeroData,
@@ -430,7 +431,7 @@ export default function ContactPage() {
                 className="form-reveal reveal-item mb-5 leading-relaxed"
                 style={{ color: "#F8F9F5", fontSize: "clamp(15px, 1.1vw, 17px)", lineHeight: 1.6 }}
               >
-                You can schedule a free site visit with Matt, our Director, and we&apos;ll guide you from there.
+                You can schedule a free site visit with {client.founderName}, our {client.founderRole}, and we&apos;ll guide you from there.
               </p>
               <p
                 className="form-reveal reveal-item mb-3"
@@ -446,7 +447,7 @@ export default function ContactPage() {
               </p>
               <p className="form-reveal reveal-item">
                 <a
-                  href="tel:07470867661"
+                  href={phoneLink}
                   style={{
                     color: "#F8F9F5",
                     fontSize: "clamp(16px, 1.3vw, 20px)",
@@ -455,7 +456,7 @@ export default function ContactPage() {
                     fontFamily: "var(--font-body)",
                   }}
                 >
-                  07470 867661
+                  {client.phone}
                 </a>
               </p>
             </div>

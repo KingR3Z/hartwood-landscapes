@@ -1,4 +1,5 @@
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client } from "@/config/client";
 
 export default function PrivacyPage() {
   return (
@@ -20,7 +21,7 @@ export default function PrivacyPage() {
 
           <div className="space-y-6" style={{ color: "#555", fontSize: "15px", lineHeight: 1.8 }}>
             <p>
-              Garden & Driveways Ltd is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you visit our website or use our services.
+              {client.legalName} is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you visit our website or use our services.
             </p>
 
             <h2 style={{ color: "#2C2C2C", fontSize: "18px", fontWeight: 500, marginTop: "32px" }}>
@@ -48,14 +49,14 @@ export default function PrivacyPage() {
               Your Rights
             </h2>
             <p>
-              You have the right to access, correct, or delete your personal data at any time. To exercise these rights, please contact us at sales@gardenanddriveways.co.uk.
+              You have the right to access, correct, or delete your personal data at any time. To exercise these rights, please contact us at {client.email}.
             </p>
 
             <h2 style={{ color: "#2C2C2C", fontSize: "18px", fontWeight: 500, marginTop: "32px" }}>
               Contact
             </h2>
             <p>
-              If you have questions about this privacy policy, please contact us at sales@gardenanddriveways.co.uk or call 07470 867661.
+              If you have questions about this privacy policy, please contact us at {client.email} or call {client.phone}.
             </p>
 
             <p style={{ marginTop: "40px", color: "#999", fontSize: "13px" }}>

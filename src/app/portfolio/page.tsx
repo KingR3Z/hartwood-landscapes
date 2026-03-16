@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { client } from "@/config/client";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
 
@@ -296,7 +297,7 @@ export default function PortfolioPage() {
             className="mt-4 max-w-lg mx-auto"
             style={{ color: "rgba(0,0,0,0.45)", fontSize: "14px", lineHeight: 1.8 }}
           >
-            Completed driveways, patios, gardens and landscaping projects across Staffordshire
+            Completed driveways, patios, gardens and landscaping projects across {client.basedIn}
           </p>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { whyChooseData } from "@/data/homepage";
+import { client, phoneLink } from "@/config/client";
 import { useReveal } from "@/hooks/useReveal";
 
 export default function WhyChoose() {
@@ -13,7 +14,7 @@ export default function WhyChoose() {
       {/* Full-width background image */}
       <Image
         src={whyChooseData.image}
-        alt="Why choose Garden & Driveways"
+        alt={`Why choose ${client.name}`}
         fill
         className="object-cover"
         sizes="100vw"
@@ -74,7 +75,7 @@ export default function WhyChoose() {
               About Us <span>→</span>
             </Link>
             <a
-              href="tel:07470867661"
+              href={phoneLink}
               className="font-display"
               style={{
                 color: "var(--charcoal)",
@@ -83,7 +84,7 @@ export default function WhyChoose() {
                 textUnderlineOffset: "4px",
               }}
             >
-              07470 867661
+              {client.phone}
             </a>
           </div>
         </div>

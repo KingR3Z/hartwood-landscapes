@@ -1,4 +1,5 @@
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
+import { client } from "@/config/client";
 
 export default function AccessibilityPage() {
   return (
@@ -20,7 +21,7 @@ export default function AccessibilityPage() {
 
           <div className="space-y-6" style={{ color: "#555", fontSize: "15px", lineHeight: 1.8 }}>
             <p>
-              Garden & Driveways Ltd is committed to ensuring digital accessibility for people of all abilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
+              {client.legalName} is committed to ensuring digital accessibility for people of all abilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
             </p>
 
             <h2 style={{ color: "#2C2C2C", fontSize: "18px", fontWeight: 500, marginTop: "32px" }}>
@@ -45,7 +46,7 @@ export default function AccessibilityPage() {
               Feedback
             </h2>
             <p>
-              We welcome your feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at sales@gardenanddriveways.co.uk or call 07470 867661.
+              We welcome your feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at {client.email} or call {client.phone}.
             </p>
 
             <p style={{ marginTop: "40px", color: "#999", fontSize: "13px" }}>

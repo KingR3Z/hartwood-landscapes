@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
+import { client } from "@/config/client";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -15,9 +16,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Garden & Driveways — Paving, Patios & Landscaping in Newcastle",
-  description:
-    "Professional paving contractor in Newcastle-under-Lyme, Staffordshire. Driveways, patios, gardens and landscaping. 4.9 stars on Google Reviews.",
+  title: client.metaTitle,
+  description: client.metaDescription,
 };
 
 export default function RootLayout({

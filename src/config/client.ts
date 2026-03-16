@@ -9,7 +9,7 @@ export const client = {
   // ── Business Identity ──────────────────────
   name: "Garden & Driveways",
   shortName: "G&D",
-  legalName: "Garden & Driveways",
+  legalName: "Garden & Driveways Ltd",
   tagline: "GARDENS | DRIVEWAYS | PATIOS | LANDSCAPING",
   logoInitials: "G D",
 
@@ -66,3 +66,7 @@ export const client = {
   metaDescription:
     "Professional paving contractor in Newcastle-under-Lyme, Staffordshire. Driveways, patios, gardens and landscaping. 4.9 stars on Google Reviews.",
 };
+
+// ── Derived helpers (do not edit) ────────────
+export const phoneLink = `tel:${client.phone.replace(/\s/g, "")}`;
+export const emailLink = `mailto:${client.email}`;

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { client } from "@/config/client";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
 import Image from "next/image";
 import CTALink from "@/components/ui/CTALink";
@@ -194,7 +195,7 @@ export default function ProcessPage() {
                 maxWidth: "500px",
               }}
             >
-              Every Garden &amp; Driveways project follows a proven process. It&apos;s designed to give you
+              Every {client.name} project follows a proven process. It&apos;s designed to give you
               confidence at every step — from the first sketch to the moment you step into your
               completed landscape.
             </p>

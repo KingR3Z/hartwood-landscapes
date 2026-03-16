@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { client } from "@/config/client";
 import InnerPageLayout from "@/components/layout/InnerPageLayout";
 import Image from "next/image";
 
@@ -201,7 +202,7 @@ export default function BlogPage() {
                       {post.title.length > 50 ? post.title.slice(0, 50) + "..." : post.title}
                     </h4>
                     <div className="flex items-center gap-3">
-                      <span className="text-[#A0A1A5] text-xs">Garden &amp; Driveways Team</span>
+                      <span className="text-[#A0A1A5] text-xs">{client.name} Team</span>
                       <span className="text-[#A0A1A5] text-xs">{post.date.replace(/-/g, "/").slice(2)}</span>
                     </div>
                   </a>
